@@ -33,7 +33,10 @@ function App() {
     <BrowserRouter>
       <main>
         <Routes>
-          <Route path="/" element={<ComponentInitialPage users={users} getUsers={getUsers}/>} />
+          <Route
+            path="/"
+            element={<ComponentInitialPage users={users} getUsers={getUsers} />}
+          />
         </Routes>
       </main>
     </BrowserRouter>
