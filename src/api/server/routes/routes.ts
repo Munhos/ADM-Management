@@ -5,17 +5,10 @@ const router = Router();
 /* Management system */
 router.post("/adduser", addUserController);
 
-router.get("https://adm-management-api.vercel.app/allusers", allUsersController);
+router.get("/allusers", allUsersController);
 
 router.post("/edituser", editUserController);
 
 router.delete("/deletuser/:_id",deleteUserController);
-
-
-/* Login System */
-
-router.post("/signUp", singUpController);
-
-router.post("/signIn", signInController);
 
 export default router;
