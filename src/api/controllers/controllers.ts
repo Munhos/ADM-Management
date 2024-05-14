@@ -135,13 +135,13 @@ export const singUpController = async (req: Request, res: Response) => {
   }
 };
 
-export const signInController = async (req:Request, res:Response) => {
+export const signInController = async (req: Request, res: Response) => {
   try {
     let { email, password } = req.body
 
-    const user = await signIn.findOne({email: email});
+    const user = await signIn.findOne({ email: email });
 
-    if(!user){
+    if (!user) {
       return res.status(404).send({
         statusCode: 404,
         message: "Invalid User",
@@ -150,7 +150,7 @@ export const signInController = async (req:Request, res:Response) => {
     }
 
     const correctPassword = await bcrypt.compare(password, user.password ?? "")
-    if(!correctPassword){
+    if (!correctPassword) {
       return res.status(400).send({
         statusCode: 400,
         message: "Invalid Password",
@@ -158,7 +158,7 @@ export const signInController = async (req:Request, res:Response) => {
       });
     }
 
-    if(user && correctPassword){
+    if (user && correctPassword) {
       return res.status(200).send(
         "LOGADO COM SUUCESSO"
       )
@@ -170,5 +170,5 @@ export const signInController = async (req:Request, res:Response) => {
       error: error,
     });
   }
-  
+
 }
