@@ -5,7 +5,7 @@ const router = Router();
 /* Management system */
 router.post("/adduser", addUserController);
 
-router.get("/allusers", allUsersController);
+router.get("https://adm-management-api.vercel.app/allusers", allUsersController);
 
 router.post("/edituser", editUserController);
 
