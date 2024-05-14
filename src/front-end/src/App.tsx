@@ -18,7 +18,7 @@ function App() {
 
   const getUsers = async () => {
     try {
-      const res = await axios.get<User[]>("http://localhost:3000//allusers");
+      const res = await axios.get<User[]>("http://localhost:3000/allusers");
       setUsers(res.data);
     } catch (error) {
       console.error(error);
