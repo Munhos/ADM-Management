@@ -21,7 +21,7 @@ export const ComponentShowUser = (props: any) => {
     setIsEditing(false);
 
     try {
-      await axios.post("http://localhost:3000/edituser", {
+      await axios.post("https://adm-management-api.vercel.app/edituser", {
         _id,
         name,
         email,
