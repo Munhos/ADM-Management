@@ -10,7 +10,7 @@ export const ComponentAddUser = (props: any) => {
 
   const postUser = async () => {
     try {
-      await axios.post("http://localhost:3000/adduser", {
+      await axios.post("https://adm-management-api.vercel.app/adduser", {
         name,
         email,
         age,
