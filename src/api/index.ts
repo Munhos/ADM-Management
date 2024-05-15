@@ -4,11 +4,12 @@ import routes from "./server/routes/routes";
 import cors from "cors";
 
 const server = express();
+server.use(express.json());
 
 server.use(cors());
+
 server.use(routes);
 
-server.use(express.json());
 
 conectionData()
   .then(() => {
