@@ -6,9 +6,9 @@ import cors from "cors";
 const server = express();
 
 server.use(cors());
+server.use("/api", routes);
 
 server.use(express.json());
-server.use(routes);
 
 conectionData()
   .then(() => {
