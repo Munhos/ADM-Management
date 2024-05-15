@@ -7,10 +7,6 @@ const router = Router();
 /* Management system */
 router.post("/adduser", addUserController);
 
-router.get("/", (req, res) => {
-  return res.send("teste");
-})
-
 router.get("/allusers", allUsersController);
 
 router.post("/edituser", editUserController);
