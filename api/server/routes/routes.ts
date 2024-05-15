@@ -1,14 +1,14 @@
 import { Router } from "express";
 import { addUserController, allUsersController, editUserController, deleteUserController, singUpController, signInController } from "../../controllers/controllers";
-import {Response} from "express";
+import { Response, Request } from "express";
 
 
 const router = Router();
 /* Management system */
 router.post("/adduser", addUserController);
 
-router.get("/", (res:Response) => {
-  res.send("HELLO")
+router.get("/", (req, res) => {
+  return res.send("teste");
 })
 
 router.get("/allusers", allUsersController);
