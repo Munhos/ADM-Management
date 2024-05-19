@@ -6,8 +6,8 @@ import signUp from "../server/database/schemas/signUp";
 
 export const addUserController = async (req: Request, res: Response) => {
   try {
-    const { name, email, age, internalFunction } = req.body;
-    await addUser.create({ name, email, age, internalFunction });
+    const { name, email, age, internalFunction, observations } = req.body;
+    await addUser.create({ name, email, age, internalFunction, observations });
 
     return res.status(201).send({
       statusCode: 201,
@@ -17,6 +17,7 @@ export const addUserController = async (req: Request, res: Response) => {
       email: email,
       age: age,
       internalFunction: internalFunction,
+      observations: observations
     });
   } catch (error) {
     return res.status(500).send({
@@ -35,7 +36,7 @@ export const allUsersController = async (req: Request, res: Response) => {
 
 export const editUserController = async (req: Request, res: Response) => {
   try {
-    const { _id, name, email, age, internalFunction } = req.body;
+    const { _id, name, email, age, internalFunction, observations } = req.body;
     await addUser.updateOne(
       { _id: _id },
       {
@@ -44,6 +45,7 @@ export const editUserController = async (req: Request, res: Response) => {
           email: email,
           age: age,
           internalFunction: internalFunction,
+          observations:observations
         },
       }
     );
@@ -55,6 +57,7 @@ export const editUserController = async (req: Request, res: Response) => {
       email: email,
       age: age,
       internalFunction: internalFunction,
+      observations:observations
     });
   } catch (error) {
     return res.status(500).send({

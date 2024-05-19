@@ -13,6 +13,9 @@ const addUserSchema = new Schema({
   },
   internalFunction:{
     type:String
+  },
+  observations:{
+    type:String
   }
 });
 

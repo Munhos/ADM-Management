@@ -1,10 +1,10 @@
-*{
+/* *{
   margin: 0;
   padding: 0;
 }
 
 main{
-  background-image: url(backgroundAdmSystem.jpg);
+
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,4 +15,4 @@ main{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
+} */

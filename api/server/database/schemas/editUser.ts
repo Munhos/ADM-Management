@@ -13,6 +13,9 @@ const editUserSchema = new Schema({
   },
   internalFunction:{
     type:String
+  },
+  observations:{
+    type:String
   }
 });
 

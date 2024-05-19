@@ -28,9 +28,6 @@ export const ComponentInitialPage = (props: any) => {
         <hr />
 
         <div id="containerInfo">
-          <div className="containersInfo" id="containerUsers01">
-            <h3>BEM VINDO!</h3>
-          </div>
           <div className="containersInfo" id="containerUsers">
             {props.users.map((user: any) => (
               <ComponentShowUser
@@ -40,6 +37,7 @@ export const ComponentInitialPage = (props: any) => {
                 email={user.email}
                 age={user.age}
                 internalFunction={user.internalFunction}
+                observations={user.observations}
               />
             ))}
           </div>

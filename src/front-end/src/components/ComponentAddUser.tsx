@@ -7,6 +7,7 @@ export const ComponentAddUser = (props: any) => {
   const [email, setEmail] = useState("");
   const [age, setAge] = useState("");
   const [internalFunction, setInternalFunction] = useState("");
+  const [observations, setObservations] = useState(props.observations);
 
   const postUser = async () => {
     try {
@@ -15,12 +16,14 @@ export const ComponentAddUser = (props: any) => {
         email,
         age,
         internalFunction,
+        observations
       });
       await props.getUsers();
       setName("");
       setEmail("");
       setAge("");
       setInternalFunction("");
+      setObservations("");
     } catch (error) {
       console.error(error);
     }
@@ -67,6 +70,15 @@ export const ComponentAddUser = (props: any) => {
                   type="text"
                   value={internalFunction}
                   onChange={(e) => setInternalFunction(e.target.value)}
+                />
+              </div>
+
+              <div className="CAUinsertInfo">
+                <h3>OBSERVAÇÕES</h3>
+                <input
+                  type="text"
+                  value={observations}
+                  onChange={(e) => setObservations(e.target.value)}
                 />
               </div>
             </div>

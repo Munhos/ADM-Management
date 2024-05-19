@@ -11,6 +11,7 @@ interface User {
   email: string;
   age: number;
   internalFunction: string;
+  observations: string;
 }
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <main>
+      <main className="bg-dark vw-100 vh-100 d-flex justify-content-center align-items-center">
         <Routes>
           <Route
             path="/"
