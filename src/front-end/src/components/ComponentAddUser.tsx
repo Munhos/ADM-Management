@@ -35,7 +35,7 @@ export const ComponentAddUser = (props:any) => {
   return (
     <>
       <div id="mainContainerCAU">
-        <div id="containerCAU" className={isBlinking ? "blinking-border" : "blinking-border-error"}>
+        <div id="containerCAU" className={isBlinking ? "blinking-border" : ""}>
           <button onClick={props.toggleAddUserVisibility} type="button" className="btn btn-danger">
             <i className="bi bi-x-lg"></i>
           </button>
