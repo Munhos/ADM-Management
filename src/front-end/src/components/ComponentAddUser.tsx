@@ -1,13 +1,14 @@
-import "./styles/ComponentAddUser.css";
 import axios from "axios";
 import { useState } from "react";
+import "./styles/ComponentAddUser.css"; // Importe o arquivo CSS
 
-export const ComponentAddUser = (props: any) => {
+export const ComponentAddUser = (props:any) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [age, setAge] = useState("");
   const [internalFunction, setInternalFunction] = useState("");
   const [observations, setObservations] = useState("");
+  const [isBlinking, setIsBlinking] = useState(false);
 
   const postUser = async () => {
     try {
@@ -24,6 +25,8 @@ export const ComponentAddUser = (props: any) => {
       setAge("");
       setInternalFunction("");
       setObservations("");
+      setIsBlinking(true);
+      setTimeout(() => setIsBlinking(false), 1000);
     } catch (error) {
       console.error(error);
     }
@@ -32,10 +35,11 @@ export const ComponentAddUser = (props: any) => {
   return (
     <>
       <div id="mainContainerCAU">
-        <div id="containerCAU">
-          <button onClick={props.toggleAddUserVisibility}>
-            <span className="material-symbols-outlined">close</span>
+        <div id="containerCAU" className={isBlinking ? "blinking-border" : ""}>
+          <button onClick={props.toggleAddUserVisibility} type="button" className="btn btn-danger">
+            <i className="bi bi-x-lg"></i>
           </button>
+          
           <div id="CAUcontainerContainerInsertInfo">
             
               <div className="mb-3">
@@ -97,7 +101,7 @@ export const ComponentAddUser = (props: any) => {
             
           </div>
           <div className="CAUinsertInfo">
-            <button onClick={postUser}>ENVIAR</button>
+            <button onClick={postUser} type="button" className="btn btn-primary">Enviar</button>
           </div>
         </div>
       </div>

@@ -16,13 +16,9 @@ export const ComponentInitialPage = (props: any) => {
         <div id="containerOptions">
           <div className="optionsCase">INFORMAÇÕES GERAIS</div>
           <div className="optionsCase">
-            <div
-              onClick={toggleAddUserVisibility}
-              id="containerAddUsers"
-              className="containersUsers"
-            >
-              ADICIONAR COLABORADORES
-            </div>
+            <button onClick={toggleAddUserVisibility} type="button" className="btn btn-primary">
+              <i className="bi bi-file-earmark-plus"></i>
+            </button>
           </div>
         </div>
         <hr />
