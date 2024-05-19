@@ -37,51 +37,64 @@ export const ComponentAddUser = (props: any) => {
             <span className="material-symbols-outlined">close</span>
           </button>
           <div id="CAUcontainerContainerInsertInfo">
-            <div className="CAUcontainerInsertInfo">
-              <div className="CAUinsertInfo">
-                <h3>NOME</h3>
+            
+              <div className="mb-3">
+                <label htmlFor="name" className="form-label">Nome</label>
                 <input
                   type="text"
+                  className="form-control"
+                  id="name"
+                  placeholder="Nome..."
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
               </div>
-              <div className="CAUinsertInfo">
-                <h3>E-MAIL</h3>
+              <div className="mb-3">
+                <label htmlFor="email" className="form-label">E-mail</label>
                 <input
                   type="text"
+                  className="form-control"
+                  id="email"
+                  placeholder="E-mail..."
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
-            </div>
-            <div className="CAUcontainerInsertInfo">
-              <div className="CAUinsertInfo">
-                <h3>IDADE</h3>
+            
+            
+              <div className="mb-3">
+                <label htmlFor="age" className="form-label">Idade</label>
                 <input
                   type="text"
+                  className="form-control"
+                  id="age"
+                  placeholder="Idade..."
                   value={age}
                   onChange={(e) => setAge(e.target.value)}
                 />
               </div>
-              <div className="CAUinsertInfo">
-                <h3>CARGO</h3>
+              <div className="mb-3">
+                <label htmlFor="internalFunction" className="form-label">Cargo</label>
                 <input
                   type="text"
+                  className="form-control"
+                  id="internalFunction"
+                  placeholder="Cargo..."
                   value={internalFunction}
                   onChange={(e) => setInternalFunction(e.target.value)}
                 />
               </div>
-
-              <div className="CAUinsertInfo">
-                <h3>OBSERVAÇÕES</h3>
-                <input
-                  type="text"
+              <div className="mb-3">
+                <label htmlFor="observations" className="form-label">Observações</label>
+                <textarea
+                  className="form-control"
+                  id="observations"
+                  placeholder="Observações..."
                   value={observations}
                   onChange={(e) => setObservations(e.target.value)}
                 />
               </div>
-            </div>
+            
           </div>
           <div className="CAUinsertInfo">
             <button onClick={postUser}>ENVIAR</button>

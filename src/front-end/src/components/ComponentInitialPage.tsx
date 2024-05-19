@@ -12,7 +12,7 @@ export const ComponentInitialPage = (props: any) => {
 
   return (
     <>
-      <div id="mainContainer">
+      <div id="mainContainer" style={{height:"90vh"}}>
         <div id="containerOptions">
           <div className="optionsCase">INFORMAÇÕES GERAIS</div>
           <div className="optionsCase">
