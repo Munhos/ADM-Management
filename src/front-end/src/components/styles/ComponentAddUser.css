@@ -27,6 +27,7 @@
   position: relative;
   border-radius: 5px;
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+  border: 5px solid rgba(207, 117, 0, 0);
   padding: 20px;
 }
 
@@ -73,14 +74,30 @@
   animation: blink 1s infinite;
 }
 
+.blinking-border-error {
+  animation: blinkError 1s infinite;
+}
+
 @keyframes blink {
   0% {
-    border-color: transparent;
+
   }
   50% {
-    border-color: green;
+    border: 5px solid green;
   }
   100% {
-    border-color: transparent;
+
+  }
+}
+
+@keyframes blinkError {
+  0% {
+
+  }
+  50% {
+    border: 5px solid rgb(182, 0, 0);
+  }
+  100% {
+
   }
 }

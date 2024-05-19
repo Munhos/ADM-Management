@@ -21,8 +21,7 @@ export const ComponentInitialPage = (props: any) => {
             </button>
           </div>
         </div>
-        <hr />
-
+        <div style={{width:"100vw", height:"1px", backgroundColor:"black"}}></div>
         <div id="containerInfo">
           <div className="containersInfo" id="containerUsers">
             {props.users.map((user: any) => (

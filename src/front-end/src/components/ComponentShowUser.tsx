@@ -107,9 +107,9 @@ export const ComponentShowUser = (props: any) => {
               </div>
               <div className="mb-3">
                 <label htmlFor={`${uniqueId}-FormControlInput1`} className="form-label">
-                  Name
+                  Nome
                 </label>
-                <input disabled={!isEditing} type="text" className="form-control" id={`${uniqueId}-FormControlInput1`} placeholder="Name..." value={name} onChange={(e) => setName(e.target.value)} />
+                <input disabled={!isEditing} type="text" className="form-control" id={`${uniqueId}-FormControlInput1`} placeholder="Nome..." value={name} onChange={(e) => setName(e.target.value)} />
               </div>
               <div className="mb-3">
                 <label htmlFor={`${uniqueId}-FormControlInput2`} className="form-label">
@@ -119,21 +119,21 @@ export const ComponentShowUser = (props: any) => {
               </div>
               <div className="mb-3">
                 <label htmlFor={`${uniqueId}-FormControlInput3`} className="form-label">
-                  Age
+                  Idade
                 </label>
-                <input disabled={!isEditing} type="number" className="form-control" id={`${uniqueId}-FormControlInput3`} placeholder="Age..." value={age} onChange={(e) => setAge(e.target.value)} />
+                <input disabled={!isEditing} type="number" className="form-control" id={`${uniqueId}-FormControlInput3`} placeholder="Idade..." value={age} onChange={(e) => setAge(e.target.value)} />
               </div>
               <div className="mb-3">
                 <label htmlFor={`${uniqueId}-FormControlInput4`} className="form-label">
-                  Internal Function
+                  Cargo
                 </label>
-                <input disabled={!isEditing} type="text" className="form-control" id={`${uniqueId}-FormControlInput4`} placeholder="Internal Function..." value={internalFunction} onChange={(e) => setInternalFunction(e.target.value)} />
+                <input disabled={!isEditing} type="text" className="form-control" id={`${uniqueId}-FormControlInput4`} placeholder="Cargo..." value={internalFunction} onChange={(e) => setInternalFunction(e.target.value)} />
               </div>
               <div className="mb-3">
                 <label htmlFor={`${uniqueId}-FormControlTextarea1`} className="form-label">
-                  Observations
+                  Observações
                 </label>
-                <textarea disabled={!isEditing} className="form-control" id={`${uniqueId}-FormControlTextarea1`} value={observations} onChange={(e) => setObservations(e.target.value)}></textarea>
+                <textarea disabled={!isEditing}  className="form-control" id={`${uniqueId}-FormControlTextarea1`} value={observations} onChange={(e) => setObservations(e.target.value)}></textarea>
               </div>
             </div>
           </div>
