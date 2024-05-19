@@ -31,14 +31,16 @@ export const ComponentInitialPage = (props: any) => {
           <div className="containersInfo" id="containerUsers">
             {props.users.map((user: any) => (
               <ComponentShowUser
-                getUsers={props.getUsers}
-                _id={user._id}
-                name={user.name}
-                email={user.email}
-                age={user.age}
-                internalFunction={user.internalFunction}
-                observations={user.observations}
-              />
+              key={user._id}
+              getUsers={props.getUsers}
+              _id={user._id}
+              name={user.name}
+              email={user.email}
+              age={user.age}
+              internalFunction={user.internalFunction}
+              observations={user.observations}
+            />
+            
             ))}
           </div>
         </div>

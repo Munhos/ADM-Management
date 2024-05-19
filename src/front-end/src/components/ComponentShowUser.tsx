@@ -55,7 +55,7 @@ export const ComponentShowUser = (props:any) => {
 
   return (
     <>
-      <div className="accordion accordion-flush" style={{ width: "90%", margin:"10px" }} id={uniqueId}>
+      <div className="accordion accordion-flush" style={{ width: "90%" }} id={uniqueId}>
         <div className="accordion-item">
           <h2 className="accordion-header">
             <button
