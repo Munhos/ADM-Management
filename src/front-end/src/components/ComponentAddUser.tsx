@@ -7,7 +7,7 @@ export const ComponentAddUser = (props: any) => {
   const [email, setEmail] = useState("");
   const [age, setAge] = useState("");
   const [internalFunction, setInternalFunction] = useState("");
-  const [observations, setObservations] = useState(props.observations);
+  const [observations, setObservations] = useState("");
 
   const postUser = async () => {
     try {
