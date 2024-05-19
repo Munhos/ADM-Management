@@ -66,7 +66,7 @@ export const ComponentShowUser = (props: any) => {
 
   const deleteUser = async () => {
     try {
-      await axios.delete(`https://adm-management-api.vercel.app/deleteuser/${_id}`);
+      await axios.delete(`https://adm-management-api.vercel.app/deletuser/${_id}`);
       props.getUsers();
     } catch (error) {
       console.error("Error deleting data:", error);
